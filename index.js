@@ -26,7 +26,7 @@ server.use(express.static('build'));
 main().catch(err=> console.log(err));
 
 async function main(){
-    await mongoose.connect('mongodb+srv://shivang_4857:yQeCKxnqJH2GWIdG@cluster0.yqamvwn.mongodb.net/ecommerce');
+    await mongoose.connect(process.env.MONGO_URL);
     console.log('database connected')
 }
 
